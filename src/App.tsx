@@ -1,12 +1,15 @@
-import React from 'react';
+import { Route, Routes } from 'react-router-dom'
 
-function App() {
+import MainPage from './pages/MainPage'
+import PokemonPage from './pages/PokemonPage'
+
+const App = () => {
   return (
-    <>
-      <h1 className='text-center'>хуй</h1>
-      <h1 className='text-center'>пизда</h1>
-    </>
-  );
+    <Routes>
+      <Route path='/' element={<MainPage />} />
+      <Route path='/pokemonpage' element={<PokemonPage />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App
